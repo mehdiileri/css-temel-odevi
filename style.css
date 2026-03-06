@@ -1,0 +1,141 @@
+/* --- GENEL AYARLAR --- */
+body {
+    background-color: #f4f4f9; /* Görseldeki hafif mor/gri arka plan */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Ana Taşıyıcı Kutu */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* --- GRUP SEÇİCİ KULLANIMI (Ödev İsteri: En az 1 adet) --- */
+/* h1, h2 ve footer içindeki p etiketlerinin rengini ortak belirliyoruz */
+h1, h2, footer p {
+    color: #333951;
+}
+
+/* --- HEADER VE MENÜ ALANI --- */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #f0f2f8;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Yönerge: Menü yatay olmalı (ul > li > a yapısı) */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Yönerge: Yatay yapmak için display: inline-block kullanılmalı */
+nav ul li {
+    display: inline-block; 
+    margin-left: 5px;
+}
+
+/* Yönerge: Linklere hover efekti eklenmeli */
+/* --- HİYERARŞİK SEÇİCİ KULLANIMI 1 --- */
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #e2e6f0;
+}
+
+nav ul li a.active {
+    background-color: #879bce;
+    color: #fff;
+}
+
+/* Header altındaki açıklama yazısı */
+.intro-text {
+    padding: 20px 30px;
+    margin: 0;
+    color: #444;
+    line-height: 1.6;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+/* --- ANA İÇERİK VE İKİ SÜTUNLU YAPI --- */
+main {
+    padding: 30px;
+}
+
+/* Yönerge: İki kutuyu yan yana getirmek için display mantığı kullanılmalı */
+.content-wrapper {
+    display: flex; /* Kutu 1 ve Kutu 2'yi yan yana alır */
+    gap: 20px; /* Kutular arası boşluk */
+}
+
+/* Ortak Kutu Ayarları */
+.main-content, .sidebar {
+    flex: 1; /* İki kutunun eşit genişlikte olmasını sağlar */
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid;
+}
+
+/* Kutu 1 (Sol) Özel Renkleri */
+.main-content {
+    background-color: #fcf4e3; /* Görseldeki sarımtırak renk */
+    border-color: #eedcba;
+}
+.main-content h2 {
+    border-bottom: 1px solid #eedcba;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Kutu 2 (Sağ) Özel Renkleri */
+.sidebar {
+    background-color: #eaf3f8; /* Görseldeki mavimsi renk */
+    border-color: #c9e0ed;
+}
+.sidebar h2 {
+    border-bottom: 1px solid #c9e0ed;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* --- HİYERARŞİK SEÇİCİ KULLANIMI 2 --- */
+/* Yönerge: p etiketlerinde font-size, color, line-height, text-align gibi en az 3 özellik kullanılmalı */
+.content-wrapper p {
+    font-size: 14.5px;      /* Özellik 1 */
+    color: #4a4a4a;         /* Özellik 2 */
+    line-height: 1.7;       /* Özellik 3 */
+    text-align: justify;    /* Özellik 4 */
+    margin-bottom: 15px;
+}
+
+/* --- FOOTER (ALT BİLGİ) --- */
+footer {
+    background-color: #f4f5f8;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #dcdcdc;
+    font-size: 13px;
+}
