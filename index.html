@@ -8,16 +8,16 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" id="ana-sayfa-kismi">
         <header>
             <div class="header-top">
                 <h1>Geliştirici Portfolyosu</h1>
                 <nav>
                     <ul>
-                        <li><a href="#" class="active">Ana Sayfa</a></li>
+                        <li><a href="#" id="link-anasayfa" class="active">Ana Sayfa</a></li>
                         <li><a href="#">Projeler</a></li>
                         <li><a href="#">Ekip</a></li>
-                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#" id="link-iletisim">İletişim</a></li>
                     </ul>
                 </nav>
             </div>
@@ -47,7 +47,7 @@
         </footer>
     </div>
 
-    <div class="cv-container">
+    <div class="cv-container" id="cv-kismi">
         <div class="cv-header">
             <div class="cv-avatar">Mİ</div>
             <div class="cv-header-info">
@@ -84,7 +84,7 @@
         </div>
     </div>
 
-    <div class="contact-container">
+    <div class="contact-container" id="iletisim-kismi">
         <h2 class="form-title">Detaylı İletişim Formu</h2>
         <form action="#" method="post">
             <div class="form-group">
@@ -158,6 +158,43 @@
             </div>
         </form>
     </div>
+
+    <script>
+        const linkAnasayfa = document.getElementById('link-anasayfa');
+        const linkIletisim = document.getElementById('link-iletisim');
+        
+        const anaSayfaKismi = document.getElementById('ana-sayfa-kismi');
+        const cvKismi = document.getElementById('cv-kismi');
+        const iletisimKismi = document.getElementById('iletisim-kismi');
+
+        // İletişime tıklandığında
+        linkIletisim.addEventListener('click', function(e) {
+            e.preventDefault(); // Sayfanın yenilenmesini engeller
+            
+            // Ana sayfayı gizle, CV ve İletişim kısımlarını göster
+            anaSayfaKismi.style.display = 'none';
+            cvKismi.style.display = 'block';
+            iletisimKismi.style.display = 'block';
+            
+            // Aktif menü rengini değiştir
+            linkAnasayfa.classList.remove('active');
+            linkIletisim.classList.add('active');
+        });
+
+        // Ana Sayfaya tıklandığında
+        linkAnasayfa.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Ana sayfayı göster, diğerlerini gizle
+            anaSayfaKismi.style.display = 'block';
+            cvKismi.style.display = 'none';
+            iletisimKismi.style.display = 'none';
+            
+            // Aktif menü rengini değiştir
+            linkIletisim.classList.remove('active');
+            linkAnasayfa.classList.add('active');
+        });
+    </script>
 
 </body>
 </html>
