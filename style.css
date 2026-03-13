@@ -1,6 +1,6 @@
 /* --- GENEL AYARLAR --- */
 body {
-    background-color: #f4f4f9; /* Görseldeki hafif mor/gri arka plan */
+    background-color: #f4f4f9; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 40px 20px;
@@ -17,8 +17,7 @@ body {
     overflow: hidden;
 }
 
-/* --- GRUP SEÇİCİ KULLANIMI (Ödev İsteri: En az 1 adet) --- */
-/* h1, h2 ve footer içindeki p etiketlerinin rengini ortak belirliyoruz */
+/* --- GRUP SEÇİCİ KULLANIMI --- */
 h1, h2, footer p {
     color: #333951;
 }
@@ -38,20 +37,17 @@ h1 {
     margin: 0;
 }
 
-/* Yönerge: Menü yatay olmalı (ul > li > a yapısı) */
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-/* Yönerge: Yatay yapmak için display: inline-block kullanılmalı */
 nav ul li {
     display: inline-block; 
     margin-left: 5px;
 }
 
-/* Yönerge: Linklere hover efekti eklenmeli */
 /* --- HİYERARŞİK SEÇİCİ KULLANIMI 1 --- */
 nav ul li a {
     text-decoration: none;
@@ -71,7 +67,6 @@ nav ul li a.active {
     color: #fff;
 }
 
-/* Header altındaki açıklama yazısı */
 .intro-text {
     padding: 20px 30px;
     margin: 0;
@@ -85,36 +80,34 @@ main {
     padding: 30px;
 }
 
-/* Yönerge: İki kutuyu yan yana getirmek için display mantığı kullanılmalı */
 .content-wrapper {
-    display: flex; /* Kutu 1 ve Kutu 2'yi yan yana alır */
-    gap: 20px; /* Kutular arası boşluk */
+    display: flex; 
+    gap: 20px; 
 }
 
-/* Ortak Kutu Ayarları */
 .main-content, .sidebar {
-    flex: 1; /* İki kutunun eşit genişlikte olmasını sağlar */
+    flex: 1; 
     padding: 20px;
     border-radius: 6px;
     border: 1px solid;
 }
 
-/* Kutu 1 (Sol) Özel Renkleri */
 .main-content {
-    background-color: #fcf4e3; /* Görseldeki sarımtırak renk */
+    background-color: #fcf4e3; 
     border-color: #eedcba;
 }
+
 .main-content h2 {
     border-bottom: 1px solid #eedcba;
     padding-bottom: 10px;
     margin-top: 0;
 }
 
-/* Kutu 2 (Sağ) Özel Renkleri */
 .sidebar {
-    background-color: #eaf3f8; /* Görseldeki mavimsi renk */
+    background-color: #eaf3f8; 
     border-color: #c9e0ed;
 }
+
 .sidebar h2 {
     border-bottom: 1px solid #c9e0ed;
     padding-bottom: 10px;
@@ -122,16 +115,15 @@ main {
 }
 
 /* --- HİYERARŞİK SEÇİCİ KULLANIMI 2 --- */
-/* Yönerge: p etiketlerinde font-size, color, line-height, text-align gibi en az 3 özellik kullanılmalı */
 .content-wrapper p {
-    font-size: 14.5px;      /* Özellik 1 */
-    color: #4a4a4a;         /* Özellik 2 */
-    line-height: 1.7;       /* Özellik 3 */
-    text-align: justify;    /* Özellik 4 */
+    font-size: 14.5px;      
+    color: #4a4a4a;         
+    line-height: 1.7;       
+    text-align: justify;    
     margin-bottom: 15px;
 }
 
-/* --- FOOTER (ALT BİLGİ) --- */
+/* --- FOOTER --- */
 footer {
     background-color: #f4f5f8;
     text-align: center;
