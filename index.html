@@ -28,7 +28,6 @@
 
         <main>
             <div class="content-wrapper">
-                
                 <section class="main-content">
                     <h2>Unity & Oyun Geliştirme</h2>
                     <p>Şu anda kurucusu olduğum harika bir ekiple (18 kodlamacı ve 2 modellemeci) Steam için bağımsız bir oyun geliştiriyoruz. Ekip yönetimi ve oyun mekanikleri üzerine çalışmak oldukça heyecan verici.</p>
@@ -37,10 +36,9 @@
 
                 <aside class="sidebar">
                     <h2>Eğitim & Teknoloji Notları</h2>
-                    <p> İşbirliği için <strong>mehdi.ileri</strong> Instagram sayfamdan iletişime geçebilirsiniz.</p>
+                    <p>İşbirliği için <strong>mehdi.ileri</strong> Instagram sayfamdan iletişime geçebilirsiniz.</p>
                     <p>Bunun dışında yapay zeka ve donanım projelerimle ilgili son güncellemeleri de bu yan menüden duyuracağım.</p>
                 </aside>
-
             </div>
         </main>
 
@@ -48,30 +46,62 @@
             <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
         </footer>
     </div>
+
+    <div class="cv-container">
+        <div class="cv-header">
+            <div class="cv-avatar">Mİ</div>
+            <div class="cv-header-info">
+                <h1>Mehdi İleri</h1>
+                <div class="cv-title">Bilgisayar Mühendisi & Oyun Geliştirici</div>
+                <div class="cv-contact-info">
+                    İstanbul, Türkiye | <a href="mailto:ornek@mail.com">ornek@mail.com</a> | @mehdi.ileri
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2>Deneyim</h2>
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <strong>Bağımsız Oyun Stüdyosu - Kurucu / Geliştirici</strong>
+                    <span class="cv-date">2023 - Devam</span>
+                </div>
+                <p>20 kişilik oyun geliştirme ekibinin yönetimi, Unity üzerinde oyun mekaniklerinin tasarlanması ve kodlanması.</p>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2>Yetenekler</h2>
+            <p class="skills-label">Kullandığım Teknolojiler:</p>
+            <div class="skills-grid">
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">Yapay Zeka</span>
+                <span class="skill-tag">Algoritma</span>
+            </div>
+        </div>
+    </div>
+
     <div class="contact-container">
         <h2 class="form-title">Detaylı İletişim Formu</h2>
-
         <form action="#" method="post">
-
-            <!-- Ad Soyad -->
             <div class="form-group">
                 <label for="adsoyad">Ad Soyad:</label>
                 <input type="text" id="adsoyad" name="adsoyad" placeholder="Örn: Asaf Karataş">
             </div>
 
-            <!-- E-posta -->
             <div class="form-group">
                 <label for="eposta">E-posta Adresi:</label>
                 <input type="email" id="eposta" name="eposta" placeholder="ornek@mail.com">
             </div>
 
-            <!-- Başvuru Takip Şifresi -->
             <div class="form-group">
                 <label for="sifre">Başvuru Takip Şifresi:</label>
                 <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi girin">
             </div>
 
-            <!-- İletişim Tercihi -->
             <div class="form-group">
                 <label class="group-label">İletişim Tercihi:</label>
                 <div class="radio-group">
@@ -86,26 +116,21 @@
                 </div>
             </div>
 
-            <!-- İlgi Alanları / Yetenekler -->
             <div class="form-group">
                 <label class="group-label">İlgi Alanları / Yetenekler:</label>
                 <div class="checkbox-group">
                     <label class="option-label">
-                        <input type="checkbox" name="yetenek" value="html">
-                        HTML
+                        <input type="checkbox" name="yetenek" value="html"> HTML
                     </label>
                     <label class="option-label">
-                        <input type="checkbox" name="yetenek" value="css">
-                        CSS
+                        <input type="checkbox" name="yetenek" value="css"> CSS
                     </label>
                     <label class="option-label">
-                        <input type="checkbox" name="yetenek" value="algoritma">
-                        Algoritma
+                        <input type="checkbox" name="yetenek" value="algoritma"> Algoritma
                     </label>
                 </div>
             </div>
 
-            <!-- Konu -->
             <div class="form-group">
                 <label for="konu">Konu:</label>
                 <select id="konu" name="konu">
@@ -117,27 +142,22 @@
                 </select>
             </div>
 
-            <!-- Dosya Yükleme -->
             <div class="form-group">
                 <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
                 <input type="file" id="dosya" name="dosya" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
             </div>
 
-            <!-- Mesaj -->
             <div class="form-group">
                 <label for="mesaj">Mesajınız:</label>
                 <textarea id="mesaj" name="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
             </div>
 
-            <!-- Butonlar -->
             <div class="form-buttons">
                 <button type="submit" class="btn-gonder">Gönder</button>
                 <button type="reset" class="btn-temizle">Temizle</button>
             </div>
-
         </form>
     </div>
 
 </body>
 </html>
-
