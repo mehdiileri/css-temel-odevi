@@ -48,6 +48,96 @@
             <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
         </footer>
     </div>
+    <div class="contact-container">
+        <h2 class="form-title">Detaylı İletişim Formu</h2>
+
+        <form action="#" method="post">
+
+            <!-- Ad Soyad -->
+            <div class="form-group">
+                <label for="adsoyad">Ad Soyad:</label>
+                <input type="text" id="adsoyad" name="adsoyad" placeholder="Örn: Asaf Karataş">
+            </div>
+
+            <!-- E-posta -->
+            <div class="form-group">
+                <label for="eposta">E-posta Adresi:</label>
+                <input type="email" id="eposta" name="eposta" placeholder="ornek@mail.com">
+            </div>
+
+            <!-- Başvuru Takip Şifresi -->
+            <div class="form-group">
+                <label for="sifre">Başvuru Takip Şifresi:</label>
+                <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi girin">
+            </div>
+
+            <!-- İletişim Tercihi -->
+            <div class="form-group">
+                <label class="group-label">İletişim Tercihi:</label>
+                <div class="radio-group">
+                    <label class="option-label">
+                        <input type="radio" name="iletisim" value="eposta" checked>
+                        Bana e-posta ile ulaşın
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="iletisim" value="telefon">
+                        Bana telefonla ulaşın
+                    </label>
+                </div>
+            </div>
+
+            <!-- İlgi Alanları / Yetenekler -->
+            <div class="form-group">
+                <label class="group-label">İlgi Alanları / Yetenekler:</label>
+                <div class="checkbox-group">
+                    <label class="option-label">
+                        <input type="checkbox" name="yetenek" value="html">
+                        HTML
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="yetenek" value="css">
+                        CSS
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="yetenek" value="algoritma">
+                        Algoritma
+                    </label>
+                </div>
+            </div>
+
+            <!-- Konu -->
+            <div class="form-group">
+                <label for="konu">Konu:</label>
+                <select id="konu" name="konu">
+                    <option value="" disabled selected>Lütfen bir konu seçin...</option>
+                    <option value="is-teklifi">İş Teklifi</option>
+                    <option value="soru">Soru</option>
+                    <option value="geri-bildirim">Geri Bildirim</option>
+                    <option value="isbirligi">İşbirliği</option>
+                </select>
+            </div>
+
+            <!-- Dosya Yükleme -->
+            <div class="form-group">
+                <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+                <input type="file" id="dosya" name="dosya" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+            </div>
+
+            <!-- Mesaj -->
+            <div class="form-group">
+                <label for="mesaj">Mesajınız:</label>
+                <textarea id="mesaj" name="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+            </div>
+
+            <!-- Butonlar -->
+            <div class="form-buttons">
+                <button type="submit" class="btn-gonder">Gönder</button>
+                <button type="reset" class="btn-temizle">Temizle</button>
+            </div>
+
+        </form>
+    </div>
 
 </body>
 </html>
+
