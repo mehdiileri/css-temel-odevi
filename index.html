@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <div class="container" id="ana-sayfa-kismi">
+    <div class="container">
         <header>
             <div class="header-top">
                 <h1>Geliştirici Portfolyosu</h1>
@@ -21,30 +21,33 @@
                     </ul>
                 </nav>
             </div>
+        </header>
+
+        <div id="ana-sayfa-kismi">
             <p class="intro-text">
                 Merhaba! Bu sayfa, Bilgisayar Mühendisliği yolculuğumda geliştirdiğim projeleri, yapay zeka çalışmalarımı ve yazılım dünyasındaki deneyimlerimi paylaştığım kişisel alanım. Bu arayüz HTML5 ve CSS3 temel özellikleri kullanılarak sıfırdan tasarlandı.
             </p>
-        </header>
 
-        <main>
-            <div class="content-wrapper">
-                <section class="main-content">
-                    <h2>Unity & Oyun Geliştirme</h2>
-                    <p>Şu anda kurucusu olduğum harika bir ekiple (18 kodlamacı ve 2 modellemeci) Steam için bağımsız bir oyun geliştiriyoruz. Ekip yönetimi ve oyun mekanikleri üzerine çalışmak oldukça heyecan verici.</p>
-                    <p>Unity oyun motoru üzerinde geliştirdiğimiz bu projede edindiğimiz tecrübeleri, karşılaştığımız hataları ve optimizasyon tekniklerini ilerleyen zamanlarda bu blog üzerinden detaylıca aktaracağım.</p>
-                </section>
+            <main>
+                <div class="content-wrapper">
+                    <section class="main-content">
+                        <h2>Unity & Oyun Geliştirme</h2>
+                        <p>Şu anda kurucusu olduğum harika bir ekiple (18 kodlamacı ve 2 modellemeci) Steam için bağımsız bir oyun geliştiriyoruz. Ekip yönetimi ve oyun mekanikleri üzerine çalışmak oldukça heyecan verici.</p>
+                        <p>Unity oyun motoru üzerinde geliştirdiğimiz bu projede edindiğimiz tecrübeleri, karşılaştığımız hataları ve optimizasyon tekniklerini ilerleyen zamanlarda bu blog üzerinden detaylıca aktaracağım.</p>
+                    </section>
 
-                <aside class="sidebar">
-                    <h2>Eğitim & Teknoloji Notları</h2>
-                    <p>İşbirliği için <strong>mehdi.ileri</strong> Instagram sayfamdan iletişime geçebilirsiniz.</p>
-                    <p>Bunun dışında yapay zeka ve donanım projelerimle ilgili son güncellemeleri de bu yan menüden duyuracağım.</p>
-                </aside>
-            </div>
-        </main>
+                    <aside class="sidebar">
+                        <h2>Eğitim & Teknoloji Notları</h2>
+                        <p>İşbirliği için <strong>mehdi.ileri</strong> Instagram sayfamdan iletişime geçebilirsiniz.</p>
+                        <p>Bunun dışında yapay zeka ve donanım projelerimle ilgili son güncellemeleri de bu yan menüden duyuracağım.</p>
+                    </aside>
+                </div>
+            </main>
 
-        <footer>
-            <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
-        </footer>
+            <footer>
+                <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
+            </footer>
+        </div>
     </div>
 
     <div class="cv-container" id="cv-kismi">
@@ -169,14 +172,12 @@
 
         // İletişime tıklandığında
         linkIletisim.addEventListener('click', function(e) {
-            e.preventDefault(); // Sayfanın yenilenmesini engeller
+            e.preventDefault(); 
             
-            // Ana sayfayı gizle, CV ve İletişim kısımlarını göster
             anaSayfaKismi.style.display = 'none';
             cvKismi.style.display = 'block';
             iletisimKismi.style.display = 'block';
             
-            // Aktif menü rengini değiştir
             linkAnasayfa.classList.remove('active');
             linkIletisim.classList.add('active');
         });
@@ -185,12 +186,10 @@
         linkAnasayfa.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Ana sayfayı göster, diğerlerini gizle
             anaSayfaKismi.style.display = 'block';
             cvKismi.style.display = 'none';
             iletisimKismi.style.display = 'none';
             
-            // Aktif menü rengini değiştir
             linkIletisim.classList.remove('active');
             linkAnasayfa.classList.add('active');
         });
