@@ -1,12 +1,11 @@
 /* --- GENEL AYARLAR --- */
 body {
-    background-color: #f4f4f9; /* Görseldeki hafif mor/gri arka plan */
-    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 40px 20px;
 }
 
-/* Ana Taşıyıcı Kutu */
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -17,13 +16,11 @@ body {
     overflow: hidden;
 }
 
-/* --- GRUP SEÇİCİ KULLANIMI (Ödev İsteri: En az 1 adet) --- */
-/* h1, h2 ve footer içindeki p etiketlerinin rengini ortak belirliyoruz */
 h1, h2, footer p {
     color: #333951;
 }
 
-/* --- HEADER VE MENÜ ALANI --- */
+/* --- HEADER VE NAVIGASYON --- */
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -33,33 +30,24 @@ h1, h2, footer p {
     border-bottom: 1px solid #dcdcdc;
 }
 
-h1 {
-    font-size: 24px;
-    margin: 0;
-}
-
-/* Yönerge: Menü yatay olmalı (ul > li > a yapısı) */
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-/* Yönerge: Yatay yapmak için display: inline-block kullanılmalı */
 nav ul li {
     display: inline-block; 
     margin-left: 5px;
 }
 
-/* Yönerge: Linklere hover efekti eklenmeli */
-/* --- HİYERARŞİK SEÇİCİ KULLANIMI 1 --- */
 nav ul li a {
     text-decoration: none;
     color: #555;
     padding: 8px 15px;
     border-radius: 4px;
     font-size: 15px;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
@@ -71,7 +59,6 @@ nav ul li a.active {
     color: #fff;
 }
 
-/* Header altındaki açıklama yazısı */
 .intro-text {
     padding: 20px 30px;
     margin: 0;
@@ -80,58 +67,80 @@ nav ul li a.active {
     border-bottom: 1px solid #dcdcdc;
 }
 
-/* --- ANA İÇERİK VE İKİ SÜTUNLU YAPI --- */
+/* --- İÇERİK ALANI --- */
 main {
     padding: 30px;
 }
 
-/* Yönerge: İki kutuyu yan yana getirmek için display mantığı kullanılmalı */
 .content-wrapper {
-    display: flex; /* Kutu 1 ve Kutu 2'yi yan yana alır */
-    gap: 20px; /* Kutular arası boşluk */
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px; /* Form ile arayı açmak için */
 }
 
-/* Ortak Kutu Ayarları */
 .main-content, .sidebar {
-    flex: 1; /* İki kutunun eşit genişlikte olmasını sağlar */
+    flex: 1;
     padding: 20px;
     border-radius: 6px;
     border: 1px solid;
 }
 
-/* Kutu 1 (Sol) Özel Renkleri */
-.main-content {
-    background-color: #fcf4e3; /* Görseldeki sarımtırak renk */
-    border-color: #eedcba;
+.main-content { background-color: #fcf4e3; border-color: #eedcba; }
+.sidebar { background-color: #eaf3f8; border-color: #c9e0ed; }
+
+/* --- ÖDEV BÖLÜMÜ: İLETİŞİM FORMU (contact-container) --- */
+
+.contact-container {
+    width: 600px;               /* İster: 600px genişlik */
+    margin: 0 auto;             /* İster: margin: auto ile ortalama */
+    padding: 30px;              /* İster: Geniş iç boşluk */
+    border: 1px solid #ccc;     /* İster: Belirgin kenarlık */
+    border-radius: 10px;        /* İster: Köşe yuvarlaması */
+    background-color: #fff;
 }
-.main-content h2 {
-    border-bottom: 1px solid #eedcba;
-    padding-bottom: 10px;
+
+.contact-container h2 {
+    text-align: center;
     margin-top: 0;
 }
 
-/* Kutu 2 (Sağ) Özel Renkleri */
-.sidebar {
-    background-color: #eaf3f8; /* Görseldeki mavimsi renk */
-    border-color: #c9e0ed;
-}
-.sidebar h2 {
-    border-bottom: 1px solid #c9e0ed;
-    padding-bottom: 10px;
-    margin-top: 0;
+/* Label Ayarları */
+.contact-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-/* --- HİYERARŞİK SEÇİCİ KULLANIMI 2 --- */
-/* Yönerge: p etiketlerinde font-size, color, line-height, text-align gibi en az 3 özellik kullanılmalı */
-.content-wrapper p {
-    font-size: 14.5px;      /* Özellik 1 */
-    color: #4a4a4a;         /* Özellik 2 */
-    line-height: 1.7;       /* Özellik 3 */
-    text-align: justify;    /* Özellik 4 */
-    margin-bottom: 15px;
+/* GRUP SEÇİCİ KULLANIMI (İster 4) */
+input, select, textarea {
+    width: 100%;                /* İster: Genişlik %100 */
+    padding: 10px;              /* İster: İçine yazı yazıldığında ferah durması için padding */
+    margin-bottom: 20px;        /* İster: Elemanlar arası boşluk için margin-bottom */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;     /* Genişliğin taşmaması için kritik */
 }
 
-/* --- FOOTER (ALT BİLGİ) --- */
+/* GÖNDER BUTONU AYARLARI (İster 5) */
+.submit-btn {
+    background-color: #28a745;  /* Arka plan rengi değişti */
+    color: white;
+    border: none;               /* Kenarlık kaldırıldı */
+    padding: 12px 25px;         /* Hem sağ-sol hem alt-üst padding ile büyütüldü */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;                /* Şık durması için tam genişlik yapıldı */
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* --- FOOTER --- */
 footer {
     background-color: #f4f5f8;
     text-align: center;
